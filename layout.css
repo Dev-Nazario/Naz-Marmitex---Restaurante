@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
+
+:root
+{
+    --vermelho-principal: #D92D3F;
+    --vermelho-escuro: 	#A91F32;
+    --branco: #FFF7ED;
+    --preto: #242424;
+    --verde: #4F6F52;
+    --cinza: #4B5563;
+    --cinza-claro: #D3D3D3;
+    --verde-claro: #DDEBD6;
+    --verde-medio: #A8C5A0;
+    --verde-escuro: #174D38;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh auto 15vh 10vh;
+
+    grid-template-areas: 
+    'h'
+    'm'
+    'f'
+    'n';
+
+    background-color: var(--branco);
+
+
+}
+
+nav
+{
+    bottom: 0;
+    grid-area: n;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10%;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--branco);
+    border-top: 2pt solid var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(36, 36, 36, 0.08);
+
+}
+
+nav a
+{
+    text-decoration: none;
+    color: var(--cinza);
+}
+
+header
+{   
+    grid-area: h;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--verde);
+    border-radius: 15px;
+
+    box-shadow: 0 2px 12px rgba(36, 36, 36, 0.08);
+}
+
+header span
+{
+    font-family: "Clarity City", sans-serif;
+    font-weight: 900;
+    color: var(--vermelho-escuro);
+    display: flex;
+    justify-content: center;
+}
+
+.t1{font-size: 0.9em;}
+
+main
+{
+    grid-area: m;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.banner img
+{
+    height: 100%;
+    max-width: 95%;
+    border-radius: 10px;
+
+    object-fit: cover; /* isso é pra não deixar a imagem ficar distorcida xandin */
+}
+
+.banner{display: flex; align-items: center; justify-content: center;}
+
+.categorias
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card
+{
+    width: 95%;    
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border: 1pt solid var(--cinza-claro);
+    border-radius: 20px;
+    font-family: "Asap Sharp", sans-serif;
+    padding: 3%;
+
+    box-shadow: 0 2px 12px rgba(36, 36, 36, 0.08);
+}
+
+.card img
+{
+    width: 36%;   
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+.coluna
+{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}    
+
+.t2
+{
+    font-size: 114%;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+
+
+.paragrafo
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--cinza);
+}
+
+.botao
+{
+    border: 2pt solid var(--vermelho-escuro);
+    width: 60%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 13px;
+}
+
+.botao a
+{
+    color: var(--vermelho-escuro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+footer
+{
+    grid-area: f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+     font-family: "Asap Sharp", sans-serif;
+
+}
+
+.textofooter
+{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--verde-claro);
+    
+}
+
+.texto1
+{
+    color: var(--verde-escuro);
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.texto1 i{font-size: 120%; margin-right: 10px;}
+
+.texto2{font-size: 100%; color: var(--verde);}
+
+.navbar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+}
+
+.navbar a{font-weight: bold;}
+
+.navbar i
+{
+    color: var(--vermelho-escuro);
+    font-size: 120%;
+}
+
+.navbar:hover
+{
+    border-bottom: 4pt solid var(--vermelho-escuro);
+    border-radius: 5px;
+    color: var(--vermelho-escuro);
+}

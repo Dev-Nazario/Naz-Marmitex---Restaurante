@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
+
+:root
+{
+    --vermelho-principal: #D92D3F;
+    --vermelho-escuro: 	#A91F32;
+    --branco: #FFF7ED;
+    --preto: #242424;
+    --verde: #4F6F52;
+    --cinza: #4B5563;
+    --cinza-claro: #D3D3D3;
+    --verde-claro: #DDEBD6;
+    --verde-medio: #A8C5A0;
+    --verde-escuro: #174D38;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    background-color: var(--branco);
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows:  15vh 15vh auto 10vh;
+
+    grid-template-areas: 
+    'h'
+    'nb'
+    'm'
+    'n';
+}
+
+header
+{
+    grid-area: h;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--verde);
+    border-radius: 15px;
+
+    box-shadow: 0 2px 12px rgba(36, 36, 36, 0.08);
+    
+}
+
+.navbarr
+{
+    grid-area: nb;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarr input
+{
+    height: 30%;
+    width: 80%;
+}
+
+nav
+{
+    bottom: 0;
+    grid-area: n;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10%;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--branco);
+    border-top: 2pt solid var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(36, 36, 36, 0.08);
+
+}
+
+nav a
+{
+    text-decoration: none;
+    color: var(--cinza);
+}
+
+.navbar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+}
+
+.navbar a{font-weight: bold;}
+
+.navbar i
+{
+    color: var(--vermelho-escuro);
+    font-size: 120%;
+}
+
+.navbar:hover
+{
+    border-bottom: 4pt solid var(--vermelho-escuro);
+    border-radius: 5px;
+    color: var(--vermelho-escuro);
+}
+
+main
+{
+    grid-area: m;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section
+{
+    display: flex;
+    height: 20%;
+    min-width: 100vw;
+}
+
+.miniCard
+{
+    border: 1pt solid black;
+    width: 30%;
+}
